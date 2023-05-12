@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Wolrd!</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <!-- script -->
+    <script src="./static/index.js"></script>
+    <!-- css -->
+    <link href="./static/style.css" rel="stylesheet">
+    
+    <!--폰트어썸 CDN-->
+    <script src="https://kit.fontawesome.com/12185732d9.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Pacifico&family=Rampart+One&family=Shadows+Into+Light&family=Sigmar&display=swap"
+      rel="stylesheet">
+  </head>
+  <body>
+    <div class="mytitle">
+      <h1 class="font">MovieWorld</h1>
+    </div>
+    <div class="custom-shape-divider-top-1683554538">
+      <!-- svg는 위쪽에 물결표를 표시하기 위해 사용함.-->
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          class="shape-fill"
+        ></path>
+      </svg>
+    </div>
+    <!-- 게시글 등록을 위한 box -->
+    <div class="box1">
+      <div class="" id="post-box">
+        <div class="box1Url">
+          <input
+            id="url"
+            type="email"
+            class="box1Input"
+            autofocus
+            placeholder="영화URL"
+          />
+        </div>
+        <div class="box2Trailer">
+          <input
+            id="trailer"
+            type="url"
+            class="box1Input"
+            placeholder="트레일러URL"
+          />
+        </div>
+        <div class="box2comment">
+          <textarea id="comment" class="box1Comment" onfocus="this.value='';" value="아이디">코멘트</textarea>
+        </div>
+        <div class="mybtn">
+          <button onclick="posting()" type="button" class="box1button">
+            등록하기
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="frame">
+      <button class="genre_all btn-16" id="genre">전체</button>
+      <button class="genre btn-16" id="genre" data-type="액션">액션</button>
+      <button class="genre btn-16" id="genre" data-type="공포">공포</button>
+      <button class="genre btn-16" id="genre" data-type="어드벤처">어드벤처</button>
+      <button class="genre btn-16" id="genre" data-type="스릴러">스릴러</button>
+      <button class="genre btn-16" id="genre" data-type="로맨스">로맨스</button>
+      <button class="genre btn-16" id="genre" data-type="애니메이션">애니메이션</button>
+    </div>
+
+    <!-- 게시글 리스트 box. listing이 안될 때 보임. -->
+    <div class="box2Container">
+      <div class="box2">
+        <div class="imageBox" style="background-image: url();"></div>
+        <ul class="list">
+          <div><li class="ListBox">제목 :</li></div>
+          <div><li class="ListBox">평점 :</li></div>
+          <div><li class="ListBox">장르 :</li></div>
+          <div><li class="ListBox">코멘트 :</li></div>
+          <li class="ListBox">좋아요</li>
+        </ul>
+      </div>
+      <div id="genre-1" class="box2 on">장르 1</div>
+      <div id="genre-2" class="box2 on">장르 2</div>
+      <div id="genre-3" class="box2 on">장르 3</div>
+    </div>
+
+    <!-- tab script -->
+    <script src="./static/tab.js"></script>
+    <!--부트스트랩 스크립트-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+  </body>
+</html>
